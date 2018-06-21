@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header'
-import NewStarList from '../NewStarList/NewStarList'
+import NewStar from '../NewStar/NewStar'
+import StarList from '../StarList/StarList'
+
 
 class App extends Component {
 
@@ -41,7 +43,10 @@ render() {
   return (
     <div className="App">
       <Header />
-      <NewStarList />
+      <NewStar newStar={this.state.star} 
+          handleChangeFor={this.handleChangeFor} 
+          handleSubmit={this.handleSubmit}/>
+      <StarList starList={this.state.starList}/>
     </div>
     );
   }
